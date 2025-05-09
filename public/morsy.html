@@ -98,11 +98,11 @@
 
     <section id="appointment" class="container my-5 text-center">
         <h2 class="text-primary">احجز موعد</h2>
-        <form id="appointmentForm" class="w-50 mx-auto">
-            <input type="text" class="form-control my-2" placeholder="الاسم" id="name" required>
-            <input type="email" class="form-control my-2" placeholder="البريد الإلكتروني" id="email" >
-            <input type="tel" class="form-control my-2" placeholder="رقم الهاتف" id="phone" required>
-            <input type="date" class="form-control my-2" id="date" placeholder="معاد الحجز " required>
+        <form id="appointmentForm" class="w-50 mx-auto" method="POST" action="/api/reserve">
+            <input type="text" class="form-control my-2" placeholder="الاسم" id="name" name="name" required>
+            <input type="email" class="form-control my-2" placeholder="البريد الإلكتروني" id="email" name="email">
+            <input type="tel" class="form-control my-2" placeholder="رقم الهاتف" id="phone" name="phone" required>
+            <input type="date" class="form-control my-2" id="date" name="date" placeholder="معاد الحجز" required>
             <button type="submit" class="btn btn-primary">إرسال</button>
         </form>
     </section>
